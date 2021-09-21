@@ -1,0 +1,1 @@
+powershell -STA -File Squeege.ps1
