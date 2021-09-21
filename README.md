@@ -11,4 +11,4 @@ The data sets collected
 - Current Network Connections
 - Security Event Log Scanning
 
-Squeege will create a report with all teh data collected for easy analysis. 
+Squeege will create a report with all the data collected for easy analysis. 
