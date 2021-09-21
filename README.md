@@ -12,3 +12,11 @@ The data sets collected
 - Security Event Log Scanning
 
 Squeege will create a report with all the data collected for easy analysis. 
+
+# Running the script
+
+If you run Squeege from the Powershell ISE, VSCode or another editor make sure you run the editor as an Administrator. 
+
+If you run the .ps1 fil directly you can run the batch file or use the command 'powershell -STA -File Squeege.ps1'.
+
+
