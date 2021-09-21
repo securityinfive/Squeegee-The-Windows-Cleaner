@@ -12,7 +12,8 @@
                    Windows Cleaner 1.0
 
 
-Squeege is a tool written in Powershell to gather and analyze data about your Windows machine. This tool is meant for data gathering for assistance in troubleshooting, performance management, forensic investigations or just leaning about what your machine is doing. 
+Squeege is a tool written in Powershell to gather and analyze data about your Windows machine. 
+This tool is meant for data gathering for assistance in troubleshooting, performance management, forensic investigations or just leaning about what your machine is doing. 
 
 The data sets collected
 - Computer Information
