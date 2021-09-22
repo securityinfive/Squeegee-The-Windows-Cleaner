@@ -717,12 +717,16 @@ foreach ($item in $SecEvents){
     $EventID = $SecEvents[$x].Split(":")[0].trim()
     $Descr = $SecEvents[$x].Split(":")[1].trim()
     try{
-        $EventTemp = Get-EventLog -LogName Security -InstanceId $EventID -ErrorAction Stop
+        $EventTemp = Get-EventLog -LogName Security -InstanceId $EventID | Format-Table | Out-String -ErrorAction Stop 
         $Status = "[* FOUND *] "
         Write-Host -ForegroundColor $BannerColor $Status -NoNewline
         Write-Host -ForegroundColor $BannerColor $EventID " : " -NoNewline
         Write-Host -ForegroundColor $BannerColor $Descr 
+        $EventTempTrim = $EventTemp.Trim()
+        Write-Host $EventTempTrim()
         Add-Content -Path $CurrentPath"\"$ReportName -Value "$Status $EventID $Descr"
+        Add-Content -Path $CurrentPath"\"$ReportName -Value "$EventTempTrim"
+        
     }
     catch{
         $Status = "[Not Found] "
