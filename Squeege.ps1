@@ -321,6 +321,31 @@ Write-Host -Foregroundcolor $DataColor $StartUpAppsTrim
 Add-Content -Path $CurrentPath"\"$ReportName -Value "`r $StartupAppsTrim"
 
 Write-Host " "
+Write-Host -ForegroundColor $AppInfoColor "####### Listing Registry HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run ######"
+Add-Content -Path $CurrentPath"\"$ReportName -Value "####### Listing Registry HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run ######"
+#Get-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run 
+$RunItems = Get-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run | Out-String
+$RunitemsTrim = $RunItems.trim()
+Write-Host -foregroundcolor $datacolor $RunItemstrim
+Add-Content -Path $CurrentPath"\"$ReportName -Value "$RunItemsTrim"
+
+Write-Host " "
+Write-Host -ForegroundColor $AppInfoColor "####### Listing Registry HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce ######"
+Add-Content -Path $CurrentPath"\"$ReportName -Value "####### Listing Registry HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce ######"
+#Get-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run 
+$RunItems = Get-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce | Out-String
+if ($RunItems -eq ""){
+      Write-Host -ForegroundColor $DataColor "Registry Location Empty"
+      Add-Content -Path $CurrentPath"\"$ReportName -Value "Registry Location Empty"
+}
+Else{
+      $RunitemsTrim = $RunItems.trim()
+      Write-Host -foregroundcolor $datacolor $RunItemstrim
+      Add-Content -Path $CurrentPath"\"$ReportName -Value "$RunItemsTrim"
+      
+}
+
+Write-Host " "
 Write-Host -ForegroundColor $AppInfoColor "##############################"
 Write-Host -ForegroundColor $AppInfoColor "  Gathering Running Services  "
 Write-Host -ForegroundColor $AppInfoColor "##############################"
