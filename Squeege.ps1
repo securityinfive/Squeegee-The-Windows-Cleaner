@@ -723,7 +723,7 @@ foreach ($item in $SecEvents){
         Write-Host -ForegroundColor $BannerColor $EventID " : " -NoNewline
         Write-Host -ForegroundColor $BannerColor $Descr 
         $EventTempTrim = $EventTemp.Trim()
-        Write-Host $EventTempTrim()
+        Write-Host $EventTempTrim
         Add-Content -Path $CurrentPath"\"$ReportName -Value "$Status $EventID $Descr"
         Add-Content -Path $CurrentPath"\"$ReportName -Value "$EventTempTrim"
         
