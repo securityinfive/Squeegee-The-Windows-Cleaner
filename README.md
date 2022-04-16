@@ -21,7 +21,6 @@ If you run the .ps1 fil directly you can run the batch file or use the command '
 
 
 # UPDATES
-4/16/22 - Renamed to the proper spelling of Squeegee. 
-        - Added feature the log file will be opened in Notepad upon completion.
+4/16/22 - Renamed to the proper spelling of Squeegee. Added feature the log file will be opened in Notepad upon completion.
 
 
