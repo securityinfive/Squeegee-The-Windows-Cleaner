@@ -19,6 +19,8 @@ If you run Squeegee from the Powershell ISE, VSCode or another editor make sure 
 
 If you run the .ps1 fil directly you can run the batch file or use the command 'powershell -STA -File Squeegee-v1.ps1'.
 
+You can also unblock the file from a powershell prompt, 'unblock-file ./Squeegee.ps1'
+
 
 # UPDATES
 9/21/21 - Added the actual even logs entries when they are found in the output and in the Squeegee log.
