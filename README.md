@@ -1,5 +1,5 @@
 # Squeegee
-Squeegee - The Windows Cleaner
+Squeegee - The Windows Cleaner (Powershell version)
 
 Squeegee is a tool written in Powershell to gather and analyze data about your Windows machine. 
 This tool is meant for data gathering for assistance in troubleshooting, performance management, forensic investigations or just leaning about what your machine is doing. 
